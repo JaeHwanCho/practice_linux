@@ -9,15 +9,13 @@
 ## Lab02
 
 ### Redirection
----
-*
-*					 CPU
-*					  l
-*Input Device	->	Memory	->	Output Deveices
-*		        	  l
-*			   Storage Devices
-*
----
+
+				 CPU
+				  l
+    Input Device	->	Memory	->	Output Deveices
+			    	  l
+			   Storage Devices
+
 * stdin -> keyboard
 * stdout, stderr -> screen
 
@@ -26,9 +24,9 @@
 * stderr: 2>
 * stdout, stderr : &>
 
+---
 ### Buffer
-* Buffering
-	* The file is in the buffer instead of going to the disk
+* Buffering : The file is in the buffer instead of going to the disk
 
 * setvbuf() : Buffer Settings	
 	* _IONBF = unbuff
