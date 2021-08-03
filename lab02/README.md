@@ -10,11 +10,13 @@
 
 ### Redirection
 ---
-			 CPU
-			  l
-Input Device	->	Memory	->	Output Deveices
-		          l
-		   Storage Devices
+*
+*					 CPU
+*					  l
+*Input Device	->	Memory	->	Output Deveices
+*		        	  l
+*			   Storage Devices
+*
 ---
 * stdin -> keyboard
 * stdout, stderr -> screen
@@ -26,7 +28,7 @@ Input Device	->	Memory	->	Output Deveices
 
 ### Buffer
 * Buffering
-	The file is in the buffer instead of going to the disk
+	* The file is in the buffer instead of going to the disk
 
 * setvbuf() : Buffer Settings	
 	* _IONBF = unbuff
