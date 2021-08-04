@@ -8,28 +8,58 @@
 
 ## Lab03
 
+**tty**: let me know my pts (virtual number)
+
+Search Terms -> Wikipedia
+
+Search Method -> Google
+
 ### Pipe
+Work by creating a new shell
 
-* |
-				 CPU
-				  l
-    Input Device	->	Memory	->	Output Deveices
-			    	  l
-			   Storage Devices
+wc : word count
+-> It's in line, word, letter order.
 
-* stdin -> keyboard
-* stdout, stderr -> screen
+grep : Command to find 
 
-* stdin	: 0< = <
-* stdout: 1> = >
-* stderr: 2>
-* stdout, stderr : &>
+
+**;** : Runs the command before and then the command after
+
+At this point, the previous command executes the command after the error.
+
+**&&** : Runs the command before and then the command after
+
+At this point, it is not run the command after the previous command fails
+
+**|** : It runs simultaneously.
 
 ---
-### Buffer
-* Buffering : The file is in the buffer instead of going to the disk
+	        stdin	stdout/stdin  stdout/stdin   stdout
+	 keyboard -> program1 -> program2 -> program3	-> display
+	        stderr					-> display
+	                        stderr			-> display
+	                                  stderr	-> display
+---
 
-* setvbuf() : Buffer Settings	
-	* _IONBF = unbuff
-	* _IOLBF = line buff
-	* _IOFBF = fully buff
+**ps**: View Background Operations
+
+**jobs** : View process
+
+**fg** : Run process at foreground
+
+**bg**, **&** : Run process at background
+
+**|****&****;**: Parallel work
+
+**kill id** : kill id process
+
+**kill -9 id**: Definitely kills the id process.
+
+**^C** : Interrupt
+
+**^Z** : Suspend Stop working in the foreground and send to the background
+
+**^D** : End of file
+
+
+**fg %n**		Imported background tasks for n into the foreground
