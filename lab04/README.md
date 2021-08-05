@@ -8,58 +8,25 @@
 
 ## Lab04
 
-**tty**: let me know my pts (virtual number)
+**Import files from PC** : scp file name account: location
 
-Search Terms -> Wikipedia
+  - ex) scp aaaa.txt pc-u17@git.ajou.ac.kr:./practical_c/lab04
 
-Search Method -> Google
+**pushd** : Save current location
 
-### Pipe
-Work by creating a new shell
+**popd** : Go to Saved Location
 
-wc : word count
--> It's in line, word, letter order.
+**od** : View files in octal numbers
 
-grep : Command to find 
+**strings** :	search for strings
 
+**wget** : Imported file for link address
 
-**;** : Runs the command before and then the command after
-
-At this point, the previous command executes the command after the error.
-
-**&&** : Runs the command before and then the command after
-
-At this point, it is not run the command after the previous command fails
-
-**|** : It runs simultaneously.
-
----
-	        stdin	stdout/stdin  stdout/stdin   stdout
-	 keyboard -> program1 -> program2 -> program3	-> display
-	        stderr					-> display
-	                        stderr			-> display
-	                                  stderr	-> display
----
-
-**ps**: View Background Operations
-
-**jobs** : View process
-
-**fg** : Run process at foreground
-
-**bg**, **&** : Run process at background
-
-**|****&****;**: Parallel work
-
-**kill id** : kill id process
-
-**kill -9 id**: Definitely kills the id process.
-
-**^C** : Interrupt
-
-**^Z** : Suspend Stop working in the foreground and send to the background
-
-**^D** : End of file
+find . -name "*.out" -exec file {} \;
 
 
-**fg %n**		Imported background tasks for n into the foreground
+**-R**(option) : (R :Recursive) All Down to Recurses
+
+**tar cvf lab01.tar lab01** : Compress lab01 to lab01.tar
+
+**tar xvf lab01.tar** : decompress lab01.tar
