@@ -10,25 +10,44 @@
 
 ### C
 
-**Import files from PC** : scp file name account: location
+**sudo su** : Become a Superuser
 
-  - ex) scp aaaa.txt pc-u17@git.ajou.ac.kr:./practical_c/lab04
+**chown -R** : owner Rights
 
-**pushd** : Save current location
+**chgrp -R** : group Rights
 
-**popd** : Go to Saved Location
+---
 
-**od** : View files in octal numbers
+### d/rwx/rwx/rwx
+file type/owner(user)/group/others
 
-**strings** :	search for strings
+at
 
-**wget** : Imported file for link address
+Read Permission / Write Permission / Execute Permission
 
-find . -name "*.out" -exec file {} \;
+---
 
+### gcc compile options
+**cpp** = c preprocessor ("#")
 
-**-R**(option) : (R :Recursive) All Down to Recurses
+**-c** : generate .o file
 
-**tar cvf lab01.tar lab01** : Compress lab01 to lab01.tar
+**-g** : for debug
 
-**tar xvf lab01.tar** : decompress lab01.tar
+**-pg** : for profile
+
+**-0** : Optimization
+
+**gdb** : debugging
+
+---
+
+**localization** (= l10n)
+
+**internationalization** (= l18n)
+
+**cc -o main** : main.c 
+
+**cc -c main.c** : make o file
+
+viEditor also modifies o-files and executables.
