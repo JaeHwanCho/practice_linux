@@ -6,27 +6,154 @@
 
 조재환, 201923718
 
-## Lab04
+## Lab06
 
-**Import files from PC** : scp file name account: location
+### C Preprocessor
+1. Include head files
+1. Define macro
+1. Conditional Compilation
+1. Line Control
 
-  - ex) scp aaaa.txt pc-u17@git.ajou.ac.kr:./practical_c/lab04
+ex)
 
-**pushd** : Save current location
+A=200
 
-**popd** : Go to Saved Location
+echo A -> A
 
-**od** : View files in octal numbers
+echo $A -> 200
 
-**strings** :	search for strings
+---
+$? : Error in the most recent command
 
-**wget** : Imported file for link address
+ansi -> c99 -> c11 -> c17
 
-find . -name "*.out" -exec file {} \;
+available : c11, c99 
 
+-m32 : 32bit
 
-**-R**(option) : (R :Recursive) All Down to Recurses
+-m64 : 64bit
 
-**tar cvf lab01.tar lab01** : Compress lab01 to lab01.tar
+-c : generate .o file
 
-**tar xvf lab01.tar** : decompress lab01.tar
+-E : generate preprocessing
+
+-g : for debug
+
+-pg : for profile
+
+-0 : Optimization
+
+-m32 m64 : 32bit, 64bit
+
+-------------------------------------
+utf-8
+
+LF, CR LF and CR processing
+
+if-trigraphs
+
+long line with "\" -> merge
+
+All comments -> "" (ex) don't use Powerpoint's [""])
+
+---
+
+**tokenization with space**
+
+```
+### cpp header file
+#pragma once Declared only once
+'''
+'''
+#ifdef _MATH_
+#include <math.h>	already declared and therefore not declared
+#endif
+```
+**Multiple lines**
+```
+	#define NUMBERS 1, \
+			2, \
+			3
+	int x[] = {NUMBERS}; : int x[] = {1,2,3};
+```
+**Define**
+```
+foo = X;
+#define X 4
+bar = X;  -> foo = X, bar = 4
+```
+```
+#define TABLESIZE BUFSIZE
+#define BUFSIZE 1024 : TABLESIZE -> BUFSIZE -> 1024
+```
+```
+#define BUFSIZE 1020
+#define TABLESIZE BUFSIZE
+#undef BUFSIZE
+#define BUFSIZE 37 : TABLESIZE = 37
+```
+```
+#define min(X,Y) ((X) < (Y) ? (X) : (Y))
+x = min(a,b); -> ((a) < (b) ? (a) : (b));
+z = min(a+28); -> ((a+28) < (*p) ? (a+28) : (*p))
+```
+**BAD Examples**
+```
+#define f(a) a*a
+b = f(20+13) : 20 + 13 * 20 + 13
+```
+**Omit parameter (never don't use. just understand)**
+```
+min(,Y) (() < (Y) ? () : (Y))
+min(X,) ((X) < () ? (X) : ())
+min(,) (() < () ? () : ())
+min((,),) (((,)) < () ? ((,)) : ())
+```
+**Concatenation**
+```
+#define COMMAND(name) {#name, name ## _command}
+COMMAND(quit) : {"quit", quit_command}
+```
+**Variadic**
+```
+#define eprintf(...) fprintf(stderr, __VA_ARGS__)
+eprintf("%s:%d: ", input_file, lineno)
+    -> fprintf(stderr, "%s:%d: ", input_file, lineno)
+#define eprintf(format, ...) fprintf (stderr, format __VA_OPT__(,)__VA_ARGS__)
+```
+**Predefined Macros**
+
+__FILE__ = Filename
+
+__LINE__ = Line
+
+```
+#if, #ifdef, #ifndef, #elif, #else, #endif
+```
+**Select code with condition**
+```
+#ifdef _VERSION_
+#if _VERSION_ >= 3
+  printf("Version is greater or equal than 3\n“);
+#elif _VERSION_ == 2
+#error VERSION 2 IS NOT SUPPORTED
+#endif
+#endif  // ifdef _VERSION_
+```
+**Delete code**
+```
+#if 0
+```
+**print error msg**
+```
+#error "error msg"
+```
+
+**linenumber change**
+```
+#line linenumber filename
+```
+**#pragma**
+```
+#pragma once
+```
