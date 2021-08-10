@@ -6,7 +6,7 @@
 
 조재환, 201923718
 
-## Lab07
+## Lab06
 
 ### C Preprocessor
 1. Include head files
