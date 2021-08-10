@@ -1,0 +1,1000 @@
+  184  git clone https://git.ajou.ac.kr/Jaehwan/practical_c.git
+  185  ls
+  186  ls al
+  187  ls -al
+  188  cd practical_c/
+  189  ls
+  190  cd ..
+  191  ls
+  192  cd ..
+  193  ls
+  194  cd practical_c/
+  195  ls
+  196  mv practical_c/* .
+  197  ls
+  198  mv .git ..
+  199  cd ..
+  200  mv .git ..
+  201  ls -al
+  202  cd practical_c/
+  203  mv .git ..
+  204  ls-al
+  205  ls -al
+  206  cd practical_c/
+  207  ls -al
+  208  mv .git ..
+  209  ls
+  210  cd ..
+  211  ls
+  212  ls -al
+  213  cd practical_c/
+  214  ls
+  215  ls -al
+  216  ls ..
+  217  ls -al
+  218  cd ..
+  219  ls -al
+  220  vi .
+  221  cd .
+  222  ls
+  223  cd practical_c/
+  224  ls -al
+  225  cd ..
+  226  ls-al
+  227  ls -al
+  228  rmdir practical_c/
+  229  ls -al
+  230  ls -help
+  231  ls --help
+  232  ls -al
+  233  touch file
+  234  echo "Jaehwan Cho" >> file
+  235  cat file
+  236  git config --global user.email rhdwkrfjrzl7@ajou.ac.kr
+  237  ln file IamLink1
+  238  cat IamLink1 
+  239  echo "One More Line" >> IamLink1 
+  240  rm file
+  241  ls
+  242  ls -al
+  243  ln -s IamLink1 IamSLINK
+  244  ls
+  245  mv IamLink1 IamSLINK
+  246  cat IamSLINK 
+  247  ls -al
+  248  ls -lai
+  249  cat IamSLINK
+  250  ls -al
+  251  cat IamLink1
+  252  cat IamSLINK 
+  253  git add *
+  254  git commit -m "Push from SSH"
+  255  git push
+  256  git status
+  257  git log
+  258  git commit -m "Push from SSH"
+  259  git config --global user.email "
+  260  q
+  261  asd
+  262  q
+  263  q
+  264  q
+  265  q
+  266  q
+  267  q
+  268  "
+  269  git config --global user.name "JH"
+  270  git config
+  271  git commit -m "Push from SSH"
+  272  git push
+  273  history
+  274  git push -u origin master
+  275  git push
+  276  ls
+  277  ln
+  278  ls
+  279  ls -al
+  280  cat IamSLINK 
+  281  pwd
+  282  ls -al
+  283  ls
+  284  cd
+  285  ls
+  286  pwd
+  287  cd practical_c/
+  288  ls
+  289  ls -al
+  290  cd lab01/
+  291  ls -al
+  292  cd ..
+  293  ls
+  294  pwd
+  295  mkdir lab02
+  296  ls
+  297  cd lab02
+  298  pwd
+  299  ls
+  300  ls -al
+  301  cp ../lab01/hello.c .
+  302  ls
+  303  cat hello.c 
+  304  vi hello.c 
+  305  ls
+  306  vim hello.c
+  307  cat hello.c 
+  308  vi hello.c 
+  309  ls
+  310  vi hello.c
+  311  cc hello.c 
+  312  ./a.out
+  313  vi hello.c 
+  314  ls
+  315  vi hello.c 
+  316  cc
+  317  cat hello.c 
+  318  cc
+  319  cc hello.c
+  320  ./a.out
+  321  vi hello.c 
+  322  cc hello.c 
+  323  ./a.out
+  324  echo "201923718"
+  325  1> id
+  326  echo "201923718" 1> id
+  327  more id
+  328  more hello.c 
+  329  0< id ./a.out
+  330  a.out
+  331  ./a.out
+  332  ./a.out 0< id 1> out.txt 2> err.txt
+  333  ls
+  334  cat out.txt
+  335  cat err.txt 
+  336  ls
+  337  more out.txt 
+  338  more err.txt 
+  339  ls
+  340  ls -l
+  341  ls -al
+  342  ./a.out < id > out.txt
+  343  ./a.out id 1> out.txt 2> err.txt
+  344  cat out.txt 
+  345  cat err.txt 
+  346  cat out.txt err.txt 
+  347  1>> out.txt ./a.out
+  348  cat out.txt
+  349  1>> out.txt ./a.out
+  350  cat out.txt 
+  351  ./a.out << id
+  352  333
+  353  ./a.out 1> outfile 2> outfile
+  354  more outfile 
+  355  ./a.out &> outfile
+  356  more outfile
+  357  ls -al
+  358  ./a.out 2> /dev/null
+  359  vi hello.c 
+  360  cc hello.c 
+  361  ./a.out
+  362  vi hello.c 
+  363  ls
+  364  cd ..
+  365  ls
+  366  vi README.md 
+  367  ls -al
+  368  ls
+  369  cd lab02
+  370  ls
+  371  vi README.md 
+  372  cat README.md 
+  373  vi README.md 
+  374  cat README.md 
+  375  vi README.md 
+  376  git status
+  377  git commit -m "Lab02 README.md"
+  378  git add .
+  379  git commit -m "Lab02 README.md"
+  380  git push
+  381  vi README.md 
+  382  git status
+  383  git pull
+  384  git status
+  385  ls
+  386  vi README.md 
+  387  ls
+  388  who | sort
+  389  cd /dev
+  390  ls
+  391  ls -l stdin
+  392  ls -l /proc/self/fd
+  393  who | sort
+  394  whoami
+  395  tty
+  396  ls -al
+  397  ls
+  398  cd ..
+  399  cd ~
+  400  ls
+  401  cd practical_c/
+  402  ls
+  403  mkdir lab03
+  404  ls
+  405  cd lab03
+  406  ls
+  407  ls -al
+  408  ps
+  409  cd /etc/passwd
+  410  vi /ect/passwd
+  411  vi /etc/passwd
+  412  ls
+  413  ps -ael | grep2987
+  414  ps -ael | grep 2987
+  415  ps -ael
+  416  ls
+  417  pwd
+  418  cp ../lab02/hello.c .
+  419  ls
+  420  vi hello.c 
+  421  cc hello.c 
+  422  ls
+  423  a.out
+  424  ./a.out
+  425  mv hello.c lab03.c
+  426  ls
+  427  cp ../lab02/README.md 
+  428  cp ../lab02/README.md .
+  429  ls
+  430  vi README.md 
+  431  ls -al
+  432  cd ..
+  433  git add *
+  434  git commit -m "lab03 - start"
+  435  git push
+  436  history
+  437  git config credeantial.helper store
+  438  git push
+  439  git config credential.helper store
+  440  git push
+  441  git history
+  442  git log
+  443  git status
+  444  ls
+  445  cd lab03
+  446  ls
+  447  git config alias.history 'log --pretty=oneline'
+  448  git history
+  449  cat > infile.txt
+  450  ls
+  451  cat infile.txt 
+  452  ./a.out 0< infile.txt
+  453  cat infile.txt 
+  454  cat infile.txt | ./a.out
+  455  (sleep 10 | sleep 10| sleep 10) &
+  456  ps -l
+  457  ps- l
+  458  ps -l
+  459  grep a
+  460  who | sort
+  461  (sleep 10; echo "22") &
+  462  echo "23"
+  463  2
+  464  (sleep 10; echo "10fin") & | (sleep 5; echo "5fin") &
+  465  (sleep 10; echo "10fin") | (sleep 5; echo "5fin") &
+  466  pts
+  467  ps -l
+  468  ls -al
+  469  mkfifo pipe
+  470  ls -al
+  471  ls
+  472  a.out > pipe
+  473  cat pipe
+  474  bg
+  475  fg
+  476  ls
+  477  ./a.out > pipe
+  478  cat pipe
+  479  jobs
+  480  ls
+  481  vi pipe
+  482  ls
+  483  cd practical_c/
+  484  ls
+  485  cd lab03
+  486  ls
+  487  history
+  488  cat pipe
+  489  sleep 1
+  490  sleep 5 ; echo "5sec"
+  491  sleep 5 ; echo "5sec" &
+  492  ps
+  493  jobs
+  494  ps
+  495  ls
+  496  git status
+  497  git history 
+  498  git commit -m "infile.txt, pipe"
+  499  git status
+  500  git add *
+  501  git commit -m "infile.txt, pipe"
+  502  git status
+  503  git push
+  504  git pull
+  505  ls
+  506  vi README.md 
+  507  who | sort
+  508  logout
+  509  ls
+  510  cd practical_c/
+  511  ls
+  512  clear
+  513  ls -al
+  514  pts
+  515  who
+  516  whoami
+  517  git status
+  518  man scp
+  519  who | sort
+  520  ls
+  521  mkdir lab04
+  522  ls
+  523  cd lab04
+  524  ls
+  525  ls -al
+  526  pwd
+  527  ls
+  528  vi aaaa.txt 
+  529  ls -al
+  530  cp aaaa.txt /tmp/aaaa.txt
+  531  cd /tmp
+  532  ls -al
+  533  cd ~
+  534  ls
+  535  cd practical_c/
+  536  ls
+  537  cd lab04
+  538  ls
+  539  cp aaaa.txt /tmp/aaaa.txt
+  540  cp aaaa.txt /tmp/aaaa.txt .
+  541  cp aaaa.txt /tmp/aaaa.txt
+  542  cp aaaa.txt /tmp/aaaa.txt .
+  543  cd /tmp
+  544  ls
+  545  vi aaaa.txt
+  546  cp /tmp/aaaa.txt .
+  547  cp /tmp/bbbb.txt .
+  548  cd ~/practical_c/lab04
+  549  cp /tmp/aaaa.txt .
+  550  cp /tmp/bbbb.txt .
+  551  ls
+  552  vi aaaa.txt 
+  553  vi bbbb.txt
+  554  ls -al
+  555  vi aaaa.txt 
+  556  vi bbbb.txt 
+  557  cat aaaa.txt bbbb.txt 
+  558  ls -al
+  559  file *
+  560  cp bbbb.txt cccc.txt
+  561  vi cccc.txt 
+  562  file *
+  563  ls -al
+  564  dos2unix -n aaaa.txt dddd.txt
+  565  ls
+  566  ls -al
+  567  file *
+  568  ls -al
+  569  vi cccc.txt 
+  570  dos2unix dddd.txt 
+  571  file *
+  572  ls -al
+  573  od -x aaaa.txt 
+  574  od -d aaaa.txt 
+  575  od -ax aaaa.txt 
+  576  od -a aaaa.txt 
+  577  od -c aaaa.txt 
+  578  od -f aaaa.txt 
+  579  ../lab03/a.out .
+  580  cp ../lab03/a.out .
+  581  ls
+  582  file *
+  583  wget "https://git.ajou.ac.kr/uploads/-/system/appearance/header_logo/1/AU_72px.gif"
+  584  ls -al
+  585  ls -l
+  586  ls -R
+  587  ls
+  588  find . -name "*.out" -exec file {} |;
+  589  find . -name "*.out" -exec file {} \;
+  590  ls -al
+  591  cc ./a.out 
+  592  ls
+  593  ls -al
+  594  cp ../lab03/a.out .
+  595  ls
+  596  cd ..
+  597  tar cvf lab01.tar lab01
+  598  ls
+  599  tar cvf lab01.tar lab01cd lab04/
+  600  cd lab04
+  601  ls
+  602  diff aaaa.txt bbbb.txt 
+  603  diff cccc.txt dddd.txt 
+  604  ls -al
+  605  vi cccc.txt 
+  606  diff cccc.txt dddd.txt 
+  607  git status
+  608  cd ..
+  609  git status
+  610  ls
+  611  cd lab04
+  612  ls
+  613  ls -al
+  614  history > history.txt
+  615  ls -al
+  616  cat history
+  617  cat history.txt 
+  618  pwd
+  619  git status
+  620  cd ..
+  621  ls -al
+  622  git add .
+  623  git add *
+  624  cd ..
+  625  cd ~
+  626  ls
+  627  git add *
+  628  git add .
+  629  history
+  630  git add *
+  631  ls -al
+  632  cd ~
+  633  ls
+  634  cd practical_c/
+  635  ls -al
+  636  git add ^
+  637  git add *
+  638  git commit -m "lab04"
+  639  git push
+  640  ls
+  641  cp ../lab02/README.md .
+  642  cp ../lab03/README.md .
+  643  cd lab04
+  644  ls
+  645  cp ../lab03/README.md .
+  646  ls
+  647  vi README.md 
+  648  ls
+  649  cd ..
+  650  ls
+  651  cd pc-u18
+  652  cd ..
+  653  cd pc-u19
+  654  ls
+  655  cd practical_c/
+  656  ls
+  657  cd lab03
+  658  ls
+  659  cat README.md 
+  660  cd ..
+  661  ls
+  662  cd pc-u20
+  663  ls
+  664  cd practical_c/
+  665  ls
+  666  cd lab03
+  667  ls
+  668  cat README.md 
+  669  cd ~
+  670  ls
+  671  cd practical_c/
+  672  ls
+  673  ls -al
+  674  git add *
+  675  git commit -m "git "add lab04/README.md"
+  676  ls
+  677  git history
+  678  git commit -m "add README.md"
+  679  git status
+  680  git push
+  681  git status
+  682  git pull
+  683  git status
+  684  ls
+  685  cd lab04
+  686  ls
+  687  vi README.md 
+  688  git status
+  689  who | sort
+  690  ls -al
+  691  cd practical_c/
+  692  ls
+  693  mkdir lab05
+  694  ls
+  695  cd lab05
+  696  ls
+  697  ls -al
+  698  vi comm
+  699  ls -al
+  700  comm
+  701  ./comm
+  702  chmod --help
+  703  chmod ls -al
+  704  ls -al
+  705  chmod a+x comm
+  706  ls -al
+  707  ./comm
+  708  cdmod 774 comm
+  709  chmod 774 comm
+  710  ls -al
+  711  ./comm
+  712  pushd .
+  713  cd ..
+  714  ls -al
+  715  cd ..
+  716  ls -al
+  717  cd pc-u18
+  718  ls
+  719  cd temp
+  720  ls
+  721  ls -al
+  722  touch pc-u17
+  723  ls
+  724  who | sort
+  725  touch u-18
+  726  ls
+  727  rm u-18
+  728  ls
+  729  touch pc-u18
+  730  ls
+  731  cd dir1
+  732  ls
+  733  cd ..
+  734  ls
+  735  pwd
+  736  cd ~
+  737  pwd
+  738  chmod 700 .
+  739  cd ..
+  740  ls
+  741  cd pc-u18
+  742  cd ~
+  743  ls
+  744  ls -al
+  745  cd ..
+  746  ls -al
+  747  cd ~
+  748  ls -al
+  749  ls
+  750  cd practical_c/
+  751  ls
+  752  cd lab05
+  753  ls
+  754  cat comm
+  755  ls -al
+  756  chmod 755 comm
+  757  .comm
+  758  ./comm
+  759  ls
+  760  cd ..
+  761  ls
+  762  cd ..
+  763  ls
+  764  cd pc-u19/practical_c/lab04
+  765  cd ~
+  766  ls
+  767  cd practical_c/
+  768  ls
+  769  cd lab05
+  770  ls
+  771  cd ..
+  772  ls
+  773  cd ..
+  774  cd hwan
+  775  ls
+  776  cd practical_c/
+  777  ls
+  778  cd ~
+  779  ls
+  780  cd practical_c/
+  781  cd lab05
+  782  ls
+  783  cd ..
+  784  cd lab02
+  785  ls
+  786  cat README.md 
+  787  ls
+  788  cd ..
+  789  ls
+  790  cd lab05
+  791  ls
+  792  cp ../lab03/lab03.c .
+  793  ls
+  794  mv lab03.c main.c
+  795  ls
+  796  whereis gcc
+  797  path gcc
+  798  ext gcc
+  799  printenv
+  800  date
+  801  ls
+  802  cc main.c 
+  803  ls
+  804  which cc
+  805  ls -l /usr/bin/cc
+  806  ls -l /etc/alternatives/cc
+  807  cc -c main.c
+  808  ls
+  809  cc -o main.c
+  810  cc -o main main.c
+  811  ls
+  812  cc -c main.c
+  813  ls
+  814  ls -al
+  815  vi main.o
+  816  ls
+  817  vi main.c
+  818  cc main.c
+  819  ls
+  820  ./a.out
+  821  ps
+  822  cc -E main.c
+  823  cc -E main.c > main.cpp
+  824  vi main.cpp
+  825  vi main.c
+  826  cat main.c
+  827  cat func.c
+  828  cc main.c func.c
+  829  cc func.c main.c
+  830  vi main.c
+  831  cc func.c main.c
+  832  ./a.out 
+  833  ls -al
+  834  cat func.c
+  835  cat main.c
+  836  ls -al
+  837  ls
+  838  cc -c func.c
+  839  ls
+  840  vi func.c 
+  841  cc main.o func.c
+  842  ./a.out 
+  843  vi func.c
+  844  cat func.c
+  845  cat main.c
+  846  cc main.o func.c
+  847  ./a.out 
+  848  vi main.c
+  849  cc main.c func.c
+  850  ./a.out 
+  851  ls
+  852  cat func.h
+  853  cat main.c func.c func.h
+  854  ls
+  855  ls -al
+  856  git status
+  857  vi func.h
+  858  cat func.h func.c main.c
+  859  vi func.c
+  860  cat func.c
+  861  cc main.c func.c
+  862  ./a.out 
+  863  ls
+  864  ls -al
+  865  pwd
+  866  history > history.05
+  867  ls
+  868  cd ..
+  869  ls
+  870  ls -al
+  871  git add *
+  872  git status
+  873  ls
+  874  cd lab05
+  875  ls
+  876  cp ../lab04/README.md .
+  877  ls
+  878  vi README.md 
+  879  cat README.md 
+  880  :q
+  881  ls
+  882  cd ..
+  883  git add *
+  884  git status 
+  885  git history 
+  886  git commit -m "lab05"
+  887  git push
+  888  who | sort
+  889  logout
+  890  history
+  891  git pull
+  892  cd ..
+  893  cd ~
+  894  ls
+  895  cd practical_c/
+  896  git pull
+  897  ls
+  898  git status
+  899  git lab05
+  900  cd lab05
+  901  ls
+  902  cat README.md 
+  903  cd ..
+  904  ls
+  905  cd ..
+  906  ls
+  907  cd practical_c/
+  908  git push
+  909  git status
+  910  d lab05
+  911  ls
+  912  cd lab05
+  913  ls
+  914  cat README.md 
+  915  cd ..
+  916  cd lab04
+  917  cat README.md 
+  918  cd ..
+  919  ls
+  920  git h
+  921  cd ..
+  922  ls
+  923  cd practical_c/
+  924  git history 
+  925  logout
+  926  who | sort
+  927  ls
+  928  cd ..
+  929  ls
+  930  cd ..
+  931  ls
+  932  cd ..
+  933  ls
+  934  ls -al
+  935  ls -a
+  936  cd ..
+  937  ls
+  938  who | sort
+  939  echo $TERM
+  940  man vi
+  941  find | tee find.result
+  942  ls
+  943  gcc -print-search-dirs
+  944  cd practical_c/
+  945  ls -al
+  946  cd ..
+  947  ls
+  948  mv find.result practical_c/
+  949  ls
+  950  cd practical_c/
+  951  ls
+  952  mkdir lab06
+  953  ls
+  954  cd lab06
+  955  ls
+  956  pushd .
+  957  vi return10.c
+  958  cc return10.c -o return10
+  959  ls -al
+  960  ./return10
+  961  find ../../../pc* -name "return"
+  962  ls
+  963  more return10.c
+  964  A=200
+  965  echo A
+  966  ls
+  967  echo $A
+  968  ./return10
+  969  echo $?
+  970  A=$?
+  971  echo $A
+  972  gcc -save-temps return10.c
+  973  ls -al
+  974  file retu*
+  975  cat file retu*
+  976  more return 10.s
+  977  more return10.s
+  978  cc -m64 return10.c -o ret10.64
+  979  cc -m32 return10.c -o ret10.32
+  980  cc -m16 return10.c -o ret10.16
+  981  ls
+  982  file ret10*
+  983  diff ret10*
+  984  diff ret10.32 ret10.64
+  985  vi errortest.c
+  986  ls
+  987  cp /home/hwan/practical_c/lab06/errortest.c
+  988  cp /home/hwan/practical_c/lab06/errortest.c .
+  989  ls
+  990  cc errortest.c
+  991  ls
+  992  cc errortest.c 
+  993  cat errortest.c 
+  994  ls
+  995  cp return10.c cond.c
+  996  ls
+  997  vi cond.c
+  998  ls
+  999  rm cond.c 
+ 1000  cp /home/hwan/practical_c/lab06/cond.c .
+ 1001  ls
+ 1002  vi cond.c 
+ 1003  cc cond.c 
+ 1004  ./a.out 
+ 1005  vi cond.c 
+ 1006  cc cond.c 
+ 1007  a.out > pipe
+ 1008  ./a.out 
+ 1009  vi cond.c
+ 1010  cc cond.c
+ 1011  ./a.out 
+ 1012  more cond.c 
+ 1013  ls -al
+ 1014  rm pipe 
+ 1015  ls
+ 1016  ls -al
+ 1017  ccc -DDEBUG_MODE=1 cond.c
+ 1018  cc -DDEBUG_MODE=1 cond.c
+ 1019  ./a.out 
+ 1020  cc cond.c 
+ 1021  ./a.out 
+ 1022  history
+ 1023  vi cond.c
+ 1024  ls
+ 1025  vi errortest.c 
+ 1026  cc errortest.c 
+ 1027  vi errortest.c 
+ 1028  cc errortest.c 
+ 1029  ./a.out 
+ 1030  ls -al
+ 1031  mv return10.s return10.assy
+ 1032  cc return10.assy 
+ 1033  cc -x assembler return10.assy
+ 1034  cc -x c++ return10.c
+ 1035  ./a.out 
+ 1036  echo $?
+ 1037  ls
+ 1038  cc co
+ 1039  cc cond.c 
+ 1040  vi cond.c 
+ 1041  cc cond.c 
+ 1042  ./a.out 
+ 1043  history
+ 1044  cc -DDEBUG_MODE=1 cond.c
+ 1045  history
+ 1046  ./a.out 
+ 1047  man cc | grep undefine
+ 1048  ls -al
+ 1049  history > history.txt
+ 1050  ls
+ 1051  git add *
+ 1052  git history
+ 1053  ls
+ 1054  cp ../lab04/README.md .
+ 1055  ls
+ 1056  git add *
+ 1057  git commit -m "lab06"
+ 1058  ls
+ 1059  git push
+ 1060  git fetch
+ 1061  git push
+ 1062  pit merge
+ 1063  git merge
+ 1064  ls
+ 1065  git status
+ 1066  ls
+ 1067  ls -al
+ 1068  cd ..
+ 1069  git add *
+ 1070  git status 
+ 1071  cd lab06
+ 1072  ls
+ 1073  ls -al
+ 1074  git history
+ 1075  cd ..
+ 1076  ls
+ 1077  git add *
+ 1078  git status
+ 1079  git commit -m "lab06"
+ 1080  git push
+ 1081  who | sort
+ 1082  git pull
+ 1083  ls
+ 1084  git status
+ 1085  who | sort
+ 1086  logout
+ 1087  ls
+ 1088  cd practical_c/
+ 1089  ls
+ 1090  cd ..
+ 1091  git pull
+ 1092  cd ..
+ 1093  ls
+ 1094  cd ~
+ 1095  git pull
+ 1096  cd practical_c/
+ 1097  git pull
+ 1098  ls
+ 1099  mkdir lab07
+ 1100  cd lab07
+ 1101  ls
+ 1102  ls -al
+ 1103  vi fx_s2308.c
+ 1104  python
+ 1105  ls
+ 1106  vi fx_s2308.c 
+ 1107  cc fx_s2308.c
+ 1108  vi fx_s2308.c 
+ 1109  cc fx_s2308.c
+ 1110  vi fx_s2308.c 
+ 1111  cc fx_s2308.c
+ 1112  ./a.out 
+ 1113  vi fx_s2308.c 
+ 1114  cat ../../pwd
+ 1115  ../../ pwd
+ 1116  vi fx_s2308.c 
+ 1117  cp /home/hwan/practical_c/lab07/fx_s1516.c .
+ 1118  ls
+ 1119  vi fx_s1516.c 
+ 1120  cp fx_s1516.c .
+ 1121  vi fx_s1516.c 
+ 1122  cc fx_s1516.c 
+ 1123  vi fx_s1516.c 
+ 1124* vi fx_s2308.c
+ 1125  vi fx_s1516.c 
+ 1126  cc fx_s1516.c 
+ 1127  ./a.out 
+ 1128  vi fx_s1516.c 
+ 1129  ./a.out 
+ 1130  vi fx_s1516.c 
+ 1131  cc fx_s1516.c 
+ 1132  ./a.out 
+ 1133  vi fx_s1516.c 
+ 1134  ./a.out 
+ 1135  vi fx_s1516.c 
+ 1136  cc fx_s1516.c 
+ 1137  vi fx_s1516.c 
+ 1138  cc fx_s1516.c 
+ 1139  vi fx_s1516.c 
+ 1140  cc fx_s1516.c 
+ 1141  vi fx_s1516.c 
+ 1142  cc fx_s1516.c 
+ 1143  ./a.out 
+ 1144  ./a.out 2888 2888
+ 1145  ./a.out 
+ 1146* 
+ 1147  ./a.out 
+ 1148  ls
+ 1149  vi fx_s1516.c 
+ 1150  rm fx_s2308.c 
+ 1151  ls
+ 1152  mv fx_s1516.c fx_s2308.c
+ 1153  ls
+ 1154  vi fx_s2308.c 
+ 1155  ls
+ 1156  cp fx_s2308.c temp.c
+ 1157  ls
+ 1158  vi temp.c 
+ 1159  cc temp.c 
+ 1160  vi temp.c 
+ 1161  cc temp.c 
+ 1162  vi temp.c 
+ 1163  cc temp.c 
+ 1164  ./a.out 
+ 1165  vi temp.c 
+ 1166  ./a.out 
+ 1167  vi temp.c 
+ 1168  cc temp.c 
+ 1169  vi temp.c 
+ 1170  cc temp.c 
+ 1171  ./a.out 
+ 1172  vi temp.c 
+ 1173  cc temp.c 
+ 1174  ./a.out 
+ 1175  vi temp.c 
+ 1176  ./a.out 
+ 1177  80000 80000
+ 1178  ./a.out 
+ 1179  ls
+ 1180  mv temp.c fx_test.c
+ 1181  ls
+ 1182  history
+ 1183  history > history.txt
