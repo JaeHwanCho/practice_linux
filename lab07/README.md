@@ -6,7 +6,7 @@
 
 조재환, 201923718
 
-## Lab06
+## Lab07
 
 ### C Preprocessor
 1. Include head files
@@ -14,7 +14,7 @@
 1. Conditional Compilation
 1. Line Control
 
-ex)
+)
 
 A=200
 
