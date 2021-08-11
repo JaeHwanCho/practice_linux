@@ -6,164 +6,83 @@
 
 조재환, 201923718
 
-## Lab07
+## Lab08
 
-### double (*f[10])(int const *a, double (*g[10])(double h));
+### Tip
+Put as many parentheses as we can.
 
-It's a function.
+Command to find parentheses : %
 
-Return is Double
-
-Two parameters
-
-const modifies int.
-
-f라고 하는 함수의 포인터 어레이입니다.
-
-f는	// 매개변수를 상수 정수 가리키는 포인터 a와 // g라는 매개변수 h 1개있는 포인터함수의 크기가 10인 어레이 // 2개를 매개변수로 갖는다.
-
-리턴 value는 double
-
----
 ### Pointer
+When using a pointer, you need () to tie the pointer.
 
-%val - Address of val
+### Debugging
+in VS
+ - Debug : Have -g option
+ - Release : Don't have -g
 
-*ptr - Value in address val
+#### Macros are faster than functions in terms of performance.
+ - Overflow
 
-int *a // c++ increment by 4
-
-long long *b // c++ increment by 8
-
-void *c // c++ increment by 1
-
-**unsigned, const Position**
-
--> unsigned int const a;
-
----
-### Memory model
-
-Automatic : Basic
-
-static : same place throughout the life of the program
-
-Manual : malloc and free
-
-| | Static | Auto | Manual |  
-|:--- | :---: | :---: | :---: |  
-| static to zero on startup | O |  |  | 
-| Scope set values on init | O | O |  | 
-| Can set values on init | O | O |  | 
-| Can set nonconstant values on init |  | O |  | 
-| sizeof measures array size | O | O |  | 
-| persists accross function calls | O |  | O | 
-| can be global | O |  | O | 
-| Array size can be set at runtime |  | O | O | 
-| Can be resized |  |  | O | 
-
-**const**
-
-int const A : A constant integer
-
-int const *A : A (variable) pointer to a constant integer
-
-int * const A : A constant pointer to a (variable) integer
-
-int * const * A : A pointer to a constant pointer to an integer
-
-int const * * A : A pointer to a pointer to a constant integer
-
-int const * const * : A pointer to a constant pointer to a constant integer
+#### Shift operations are faster than arithmetic operations.
+##### Multiplication and addition are about the same.
 
 ---
 
-**Array vs Pointer**
-
-**Array**
-
-1. Allocate more free space
-1. bind allocate space
-
-**Pointer**
-
-1. just pointer
-1. a = malloc(16*4);
-
----
-
-**How to change const**
 ```
-a[0] = 100;
-int const *b = a;
-*(int *)b = 200;
--> a[0] = 200
+#define fx_mul2(a,b)    (fromFloat(((toFloat(a))*(toFloat(b)))))
+#define fx_mul3(a,b)    (((a)*(b))>>FX_QNUM)
+#define fx_mul4(a,b)    ((((long long)(a))*((long long)(b)))>>FX_QNUM)
+#define fx_mul5(a,b)    (((a)>>FX_QNUM_HALF1)*((b)>>FX_QNUM_HALF2))
 ```
 
----
-**Pointer**
+mul2	It does everything it can, but it takes a long time to calculate.
 
-function pointer
-```
-float (*f)(int, double);
-void (*f)(int a);
-```
----
+mul3	Overflow occurs too quickly
 
-[unsigned] char 0~255(2^8-1)
+mul4	Took too long at 32 bits
 
-[signed] char -128(-2^7) ~ 127(2^7-1)
-
-long long : 64bit
-
-int : 32bit
-
-short : 16bit
-
-char : 8bit
+mul5	Mul5 is more advantageous than Mul4 when the number greater than 1 comes because it is faster than Mul4.
 
 ---
 
-**representation of a number**
+### Typecasting
 
-#### (sign*-1 + 1)*(1.0 + fraction * 2*-23) * 2^(exp-127)
+**"+"**
 
-| | sign | exp | fraction |  
-|:---: | :---: | :---: | :---: |  
-| float | 1bit | 8bit | 23bit | 
-| half | 1bit | 5bit | 11bit | 
-| double | 1bit | 11bit | 53bit | 
-| quadruple | 1bit | 15bit | 113bit | 
+int + int = int
 
+int + float = float
 
-| b7 | b6 | b5 | b4 | b3 | b2 | b1 | b0 | 
-|:---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |  
-| X | 2^2 | 2^1 | 2^0 |  2^-1 | 2^-2 | 2^-3 | 2^-4 |
+float + float = float
 
-If b7 is sign bit -1, change to 2 remuneration
+**"-"**
+
+int - int = int
+int - float = float
+float - float = float
+
+**"*"**
+
+int * int = int
+int * float = float
+float * float = float
+
+**"/"**
+
+int / int = float
+int / float = float
+float / float = float
+
+**"%"**
+
+int % int = int
 
 ---
+### gdb Debugging
 
-* plus / minus
-	* iv = iv_a + iv_b
+cc -g FILENAME1.c
 
-* multiple
-	* iv = iv_a * iv_b * 2^-q
+gdb FILENAME2.out
 
----
-
-### 실습
-
-**에러가 나거나 값이 안나오는 이유**
-
-파일형을 바꾸는 과정에서 숫자를 곱하거나 나누게 되는데,
-
-그 때, 범위를 나가게 되어 값에 에러가 나거나
-
-값으로 나눠주며 int에서 0으로 바뀌면서 문제가 발생한다.
-
-##### 추가
-
-fx_s2308.c 에서 8388607까지 가능하고, 8388608부터 에러가 발생한다.
-
-fx_test.c에서 추가적인 몇가지를 테스트해보았는데 곱하는 과정과 나누는 과정에서 문제가 발생하는 것을 확인하였다.
+list : Show the code
