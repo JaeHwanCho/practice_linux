@@ -86,3 +86,17 @@ cc -g FILENAME1.c
 gdb FILENAME2.out
 
 list : Show the code
+
+list NUMBER : Show the code near line NUMBER
+
+run : Run the file
+
+break NUMBER : Stop at NUMBER
+
+next : run next code
+
+step : run next code
+
+cont : Continue the file
+
+print @ : print @'s value
