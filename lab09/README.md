@@ -6,97 +6,54 @@
 
 조재환, 201923718
 
-## Lab08
+## Lab09
 
-### Tip
-Put as many parentheses as we can.
+### what make differnet performance
+#### Golden Rule
 
-Command to find parentheses : %
+Speed : CPU > Memory > Storage > IO
 
-### Pointer
-When using a pointer, you need () to tie the pointer.
+Register > Cache > Memory
 
-### Debugging
-in VS
- - Debug : Have -g option
- - Release : Don't have -g
+Locality
 
-#### Macros are faster than functions in terms of performance.
- - Overflow
+Pipeline - Multiple operations at the same time (in Computer architecture)
 
-#### Shift operations are faster than arithmetic operations.
-##### Multiplication and addition are about the same.
+Error - overflow (Performance slows down.)
+
+function
 
 ---
 
-```
-#define fx_mul2(a,b)    (fromFloat(((toFloat(a))*(toFloat(b)))))
-#define fx_mul3(a,b)    (((a)*(b))>>FX_QNUM)
-#define fx_mul4(a,b)    ((((long long)(a))*((long long)(b)))>>FX_QNUM)
-#define fx_mul5(a,b)    (((a)>>FX_QNUM_HALF1)*((b)>>FX_QNUM_HALF2))
-```
-
-mul2	It does everything it can, but it takes a long time to calculate.
-
-mul3	Overflow occurs too quickly
-
-mul4	Took too long at 32 bits
-
-mul5	Mul5 is more advantageous than Mul4 when the number greater than 1 comes because it is faster than Mul4.
+**Depend on HW**
+ - 1cycle execution : +, -, >>, <<, >?
 
 ---
 
-### Typecasting
+Ex)     **a = a + b;**
 
-**"+"**
+| unsigned int a, b; | signed short a, b; |
+|:---: | :---: |  
+| ADD r0, r0, r1 | ADD r2, r0, r1 | 
+|  |  LSL r2, r2, #16 | 
+|  |  ASR r0, r2, #16 |
 
-int + int = int
-
-int + float = float
-
-float + float = float
-
-**"-"**
-
-int - int = int
-int - float = float
-float - float = float
-
-**"*"**
-
-int * int = int
-int * float = float
-float * float = float
-
-**"/"**
-
-int / int = float
-int / float = float
-float / float = float
-
-**"%"**
-
-int % int = int
+**signed short** is slower than **unsigned int**
 
 ---
-### gdb Debugging
 
-cc -g FILENAME1.c
+### How to profile and optimize
 
-gdb FILENAME2.out
+#### GNU Profiler
 
-list : Show the code
+**cc -pg "c file name(.c)"**
+ - Compile c file with pg option
+ - cc -pg fx_s2308.c
 
-list NUMBER : Show the code near line NUMBER
+**./"Execute file name(.out)" <<< "A_value B_value"**
+ - Execute file and insert A_value and B_value
+ - ./a.out <<< "0.1 0.1"
 
-run : Run the file
-
-break NUMBER : Stop at NUMBER
-
-next : run next code
-
-step : run next code
-
-cont : Continue the file
-
-print @ : print @'s value
+**gprof "Execute file name(.out)" gmon.out > "prof file name(.prof)"**
+ - make profile ".prof"
+ - gprof a.out gmon.out > a.prof
