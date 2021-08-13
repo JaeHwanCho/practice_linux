@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/fx_main.dir/fx_main.c.o CMakeFiles/fx_main.dir/fx_test.c.o CMakeFiles/fx_main.dir/fx_s2308.c.o  -o fx_main 

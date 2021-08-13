@@ -1,0 +1,3 @@
+/home/pc-u17/practical_c/lab10/cmaketest/CMakeFiles/rebuild_cache.dir
+/home/pc-u17/practical_c/lab10/cmaketest/CMakeFiles/fx_main.dir
+/home/pc-u17/practical_c/lab10/cmaketest/CMakeFiles/edit_cache.dir

@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pc-u17/practical_c/lab10/cmaketest/fx_main.c
+stdio.h
+-
+fx_s2308.h
+/home/pc-u17/practical_c/lab10/cmaketest/fx_s2308.h
+fx_test.h
+/home/pc-u17/practical_c/lab10/cmaketest/fx_test.h
+
+/home/pc-u17/practical_c/lab10/cmaketest/fx_s2308.c
+fx_s2308.h
+/home/pc-u17/practical_c/lab10/cmaketest/fx_s2308.h
+
+/home/pc-u17/practical_c/lab10/cmaketest/fx_s2308.h
+
+/home/pc-u17/practical_c/lab10/cmaketest/fx_test.c
+fx_s2308.h
+/home/pc-u17/practical_c/lab10/cmaketest/fx_s2308.h
+
+/home/pc-u17/practical_c/lab10/cmaketest/fx_test.h
+
