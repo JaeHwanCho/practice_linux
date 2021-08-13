@@ -1,43 +1,3 @@
-  886  git commit -m "lab05"
-  887  git push
-  888  who | sort
-  889  logout
-  890  history
-  891  git pull
-  892  cd ..
-  893  cd ~
-  894  ls
-  895  cd practical_c/
-  896  git pull
-  897  ls
-  898  git status
-  899  git lab05
-  900  cd lab05
-  901  ls
-  902  cat README.md 
-  903  cd ..
-  904  ls
-  905  cd ..
-  906  ls
-  907  cd practical_c/
-  908  git push
-  909  git status
-  910  d lab05
-  911  ls
-  912  cd lab05
-  913  ls
-  914  cat README.md 
-  915  cd ..
-  916  cd lab04
-  917  cat README.md 
-  918  cd ..
-  919  ls
-  920  git h
-  921  cd ..
-  922  ls
-  923  cd practical_c/
-  924  git history 
-  925  logout
   926  who | sort
   927  ls
   928  cd ..
@@ -998,3 +958,43 @@
  1883  ls
  1884  ls -al
  1885  history > history.txt
+ 1886  ls
+ 1887  history
+ 1888  ls -al
+ 1889  make clean
+ 1890  make
+ 1891  make clean
+ 1892  ls -al
+ 1893  clean
+ 1894  ls
+ 1895  vi Makefile
+ 1896  who | sort
+ 1897  git add *
+ 1898  git commit -m "lab10"
+ 1899  git push
+ 1900  w
+ 1901  ls
+ 1902  who
+ 1903  ls
+ 1904  cd cmaketest/
+ 1905  ls
+ 1906  vi CMakeLists.txt
+ 1907  cmake .
+ 1908  ls
+ 1909  vi Makefile
+ 1910  make
+ 1911  cd ..
+ 1912  ls -al
+ 1913  cd lab10
+ 1914  cd cmaketest/
+ 1915  ls
+ 1916  ./fx_main 
+ 1917  cd ..
+ 1918  ls
+ 1919  git add *
+ 1920  git commit -m "cmaketest"
+ 1921  git push
+ 1922  ls -al
+ 1923  cd lab10
+ 1924  ls
+ 1925  history > history.txt
