@@ -8,7 +8,7 @@
 
 ## Lab10
 
-### tip
+### Tip
 
 If you want to use the command as a parameter
 ls -> `ls`

@@ -1,64 +1,3 @@
-  926  who | sort
-  927  ls
-  928  cd ..
-  929  ls
-  930  cd ..
-  931  ls
-  932  cd ..
-  933  ls
-  934  ls -al
-  935  ls -a
-  936  cd ..
-  937  ls
-  938  who | sort
-  939  echo $TERM
-  940  man vi
-  941  find | tee find.result
-  942  ls
-  943  gcc -print-search-dirs
-  944  cd practical_c/
-  945  ls -al
-  946  cd ..
-  947  ls
-  948  mv find.result practical_c/
-  949  ls
-  950  cd practical_c/
-  951  ls
-  952  mkdir lab06
-  953  ls
-  954  cd lab06
-  955  ls
-  956  pushd .
-  957  vi return10.c
-  958  cc return10.c -o return10
-  959  ls -al
-  960  ./return10
-  961  find ../../../pc* -name "return"
-  962  ls
-  963  more return10.c
-  964  A=200
-  965  echo A
-  966  ls
-  967  echo $A
-  968  ./return10
-  969  echo $?
-  970  A=$?
-  971  echo $A
-  972  gcc -save-temps return10.c
-  973  ls -al
-  974  file retu*
-  975  cat file retu*
-  976  more return 10.s
-  977  more return10.s
-  978  cc -m64 return10.c -o ret10.64
-  979  cc -m32 return10.c -o ret10.32
-  980  cc -m16 return10.c -o ret10.16
-  981  ls
-  982  file ret10*
-  983  diff ret10*
-  984  diff ret10.32 ret10.64
-  985  vi errortest.c
-  986  ls
   987  cp /home/hwan/practical_c/lab06/errortest.c
   988  cp /home/hwan/practical_c/lab06/errortest.c .
   989  ls
@@ -794,207 +733,268 @@
  1719  logout
  1720  who | sort
  1721  ls
- 1722  cd practical_c/
- 1723  cd lab10
- 1724  ls
- 1725  `ls`
- 1726  grep print *.c | wc
- 1727  mail
- 1728  cc fx_main.c fx_s2308.c fx_test.c
- 1729  ./a.out 
- 1730  vi Makefile
- 1731  ls
- 1732  vi Makefile 
- 1733  make
- 1734  vi Makefile 
- 1735  make
- 1736  vi Makefile 
- 1737  make
- 1738  vi Makefile 
- 1739  make
+ 1722  cd p
+ 1723  cd practical_c/
+ 1724  cd lab10
+ 1725  ls
+ 1726  pwd
+ 1727  ls
+ 1728  ./a.out 
+ 1729  ./fx_main 
+ 1730  ls
+ 1731  vi fx_test.c
+ 1732  ls
+ 1733  vi fx_main.c
+ 1734  vi fx_main.h
+ 1735  vi fx_s2308.h
+ 1736  vi fx_s2308.c
+ 1737  vi fx_test.c
+ 1738  vi fx_test.h
+ 1739  history
  1740  ls
- 1741  fx_main
- 1742  ./fx_main 
- 1743  ls
- 1744  vi Makefile 
- 1745  make clear
- 1746  vi Makefile 
- 1747  make
- 1748  make clear
- 1749  make clean
+ 1741  cd cmaketest/
+ 1742  ls
+ 1743  cat CMakeL
+ 1744  cat CMakeLists.txt 
+ 1745  ls
+ 1746  make
+ 1747  cd ..
+ 1748  ls
+ 1749  cd ..
  1750  ls
- 1751  make
- 1752  ls
- 1753  makedep
- 1754  gccmakedep
- 1755  vi Makefile 
- 1756  ls
- 1757  vi fx_s2308.h
- 1758  vi Makefile 
- 1759  more fx_1516.h
- 1760  more fx_2308.h
- 1761  more fx_s2308.h
- 1762  vi fx_s2308.c
- 1763  ls
- 1764  vi fx_s2308.c
- 1765  vi fx_s2308.h
- 1766  vi fx_s2308.c
- 1767  vi fx_test.c
- 1768  vi fx_main.c
- 1769  vi fx_s2308.h
- 1770  vi fx_s2308.c
- 1771  diff /home/hwan/practical_c/lab10/fx_main.c ./fx_main.c
- 1772  cp /home/hwan/practical_c/lab10/fx_main.c .
- 1773  vi fx_main.c
- 1774  ls
- 1775  cat fx_s2308.h
- 1776  cp /tmp/Makefile .
+ 1751  ls -al
+ 1752  git add *
+ 1753  git pull
+ 1754  git status
+ 1755  ls
+ 1756  cd lab10
+ 1757  ls
+ 1758  cat README.md 
+ 1759  cd ..
+ 1760  ls
+ 1761  cd ..
+ 1762  ls
+ 1763  w
+ 1764  ls
+ 1765  logout
+ 1766  who | sort
+ 1767  ls
+ 1768  cd practical_c/
+ 1769  cd lab10
+ 1770  ls
+ 1771  `ls`
+ 1772  grep print *.c | wc
+ 1773  mail
+ 1774  cc fx_main.c fx_s2308.c fx_test.c
+ 1775  ./a.out 
+ 1776  vi Makefile
  1777  ls
- 1778  vi Makefile
- 1779  make depend
- 1780  ls
- 1781  cat /home/hwan/practical_c/lab10/fx_s1516.h
- 1782  ls
- 1783  vi fx_s2308.h
- 1784  ls
+ 1778  vi Makefile 
+ 1779  make
+ 1780  vi Makefile 
+ 1781  make
+ 1782  vi Makefile 
+ 1783  make
+ 1784  vi Makefile 
  1785  make
- 1786  cat /home/hwan/practical_c/lab10/fx_s1516.c
- 1787  cat fx_s2308.h
- 1788  ls
- 1789  cat fx_s2308.c
- 1790  cat /home/hwan/practical_c/lab10/fx_s1516.c
- 1791  vi fx_s2308.c
- 1792  make
- 1793  make depnd
- 1794  make depend
- 1795  vi Makefile
- 1796  make
- 1797  make clean
+ 1786  ls
+ 1787  fx_main
+ 1788  ./fx_main 
+ 1789  ls
+ 1790  vi Makefile 
+ 1791  make clear
+ 1792  vi Makefile 
+ 1793  make
+ 1794  make clear
+ 1795  make clean
+ 1796  ls
+ 1797  make
  1798  ls
- 1799  make
- 1800  ls
- 1801  ./fx_main
+ 1799  makedep
+ 1800  gccmakedep
+ 1801  vi Makefile 
  1802  ls
- 1803  vi fx_main.c
- 1804  vi fx_test.c
- 1805  ls
- 1806  vi fx_s2308.h
- 1807  cat /home/hwan/practical_c/lab10/fx_test.h
- 1808  cat /home/hwan/practical_c/lab10/fx_test.c
- 1809  cat /home/hwan/practical_c/lab10/fx_s1516.c
- 1810  cat /home/hwan/practical_c/lab10/fx_s1516.h
- 1811  cat fx_s2308.h
- 1812  ls
- 1813  vi fx_main.c
- 1814  vi fx_main.h
- 1815  vi fx_s2308.c
- 1816  cat /home/hwan/practical_c/lab10/fx_s1516.c
- 1817  vi fx_s2308.c
- 1818  vi fx_s2308.h
- 1819  cat /home/hwan/practical_c/lab10/fx_s1516.h
- 1820  vi fx_s2308.h
- 1821  ls
- 1822  cat /home/hwan/practical_c/lab10/fx_main.c
- 1823  cat fx_main.c
- 1824  vi fx_main.c
- 1825  make
+ 1803  vi fx_s2308.h
+ 1804  vi Makefile 
+ 1805  more fx_1516.h
+ 1806  more fx_2308.h
+ 1807  more fx_s2308.h
+ 1808  vi fx_s2308.c
+ 1809  ls
+ 1810  vi fx_s2308.c
+ 1811  vi fx_s2308.h
+ 1812  vi fx_s2308.c
+ 1813  vi fx_test.c
+ 1814  vi fx_main.c
+ 1815  vi fx_s2308.h
+ 1816  vi fx_s2308.c
+ 1817  diff /home/hwan/practical_c/lab10/fx_main.c ./fx_main.c
+ 1818  cp /home/hwan/practical_c/lab10/fx_main.c .
+ 1819  vi fx_main.c
+ 1820  ls
+ 1821  cat fx_s2308.h
+ 1822  cp /tmp/Makefile .
+ 1823  ls
+ 1824  vi Makefile
+ 1825  make depend
  1826  ls
- 1827  ./fx_main
- 1828  ls -al
- 1829  make clean
- 1830  make
- 1831  ls
- 1832  vi fx_test.c
- 1833  cp /home/hwan/practical_c/lab10/fx_test.c .
- 1834  cp /home/hwan/practical_c/lab10/fx_test.h .
- 1835  vi fx_test.c
- 1836  vi fx_test.h
- 1837  cat /home/hwan/practical_c/lab10/fx_main.c
- 1838  vi fx_main.c
- 1839  make
- 1840  ./fx_main 
- 1841  vi fx_test.c
+ 1827  cat /home/hwan/practical_c/lab10/fx_s1516.h
+ 1828  ls
+ 1829  vi fx_s2308.h
+ 1830  ls
+ 1831  make
+ 1832  cat /home/hwan/practical_c/lab10/fx_s1516.c
+ 1833  cat fx_s2308.h
+ 1834  ls
+ 1835  cat fx_s2308.c
+ 1836  cat /home/hwan/practical_c/lab10/fx_s1516.c
+ 1837  vi fx_s2308.c
+ 1838  make
+ 1839  make depnd
+ 1840  make depend
+ 1841  vi Makefile
  1842  make
- 1843  ./fx_main 
- 1844  p
- 1845  c
- 1846  w
- 1847  ls
- 1848  vi fx_test.c
- 1849  make
- 1850  ./fx_main 
- 1851  vi fx_s2308.c
- 1852  cat /home/hwan/practical_c/lab10/test/test.c 
- 1853  cat /home/hwan/practical_c/lab10/fx_test.c
- 1854  cat /home/hwan/practical_c/lab10/fx_test.h
- 1855  cat fx_test.h
- 1856  cat fx_test.c
- 1857  ls -al
+ 1843  make clean
+ 1844  ls
+ 1845  make
+ 1846  ls
+ 1847  ./fx_main
+ 1848  ls
+ 1849  vi fx_main.c
+ 1850  vi fx_test.c
+ 1851  ls
+ 1852  vi fx_s2308.h
+ 1853  cat /home/hwan/practical_c/lab10/fx_test.h
+ 1854  cat /home/hwan/practical_c/lab10/fx_test.c
+ 1855  cat /home/hwan/practical_c/lab10/fx_s1516.c
+ 1856  cat /home/hwan/practical_c/lab10/fx_s1516.h
+ 1857  cat fx_s2308.h
  1858  ls
- 1859  mkdir cmaketest
- 1860  cp ../* .
- 1861  ls
- 1862  ls -al
- 1863  cd ..
- 1864  ls
- 1865  cd lab10
- 1866  ls
- 1867  ls -r
- 1868  ls -al
- 1869  rm IamSLINK lab01.tar README.md 
- 1870  ls -al
- 1871  rm find.result 
+ 1859  vi fx_main.c
+ 1860  vi fx_main.h
+ 1861  vi fx_s2308.c
+ 1862  cat /home/hwan/practical_c/lab10/fx_s1516.c
+ 1863  vi fx_s2308.c
+ 1864  vi fx_s2308.h
+ 1865  cat /home/hwan/practical_c/lab10/fx_s1516.h
+ 1866  vi fx_s2308.h
+ 1867  ls
+ 1868  cat /home/hwan/practical_c/lab10/fx_main.c
+ 1869  cat fx_main.c
+ 1870  vi fx_main.c
+ 1871  make
  1872  ls
- 1873  ls -al
- 1874  cd cmaketest/
- 1875  cp ../* .
- 1876  ls
- 1877  cd ..
- 1878  ls
- 1879  ls -al
- 1880  ls
- 1881  ls -al
- 1882  rm a.out 
- 1883  ls
- 1884  ls -al
- 1885  history > history.txt
- 1886  ls
- 1887  history
- 1888  ls -al
- 1889  make clean
- 1890  make
- 1891  make clean
- 1892  ls -al
- 1893  clean
- 1894  ls
- 1895  vi Makefile
- 1896  who | sort
- 1897  git add *
- 1898  git commit -m "lab10"
- 1899  git push
- 1900  w
- 1901  ls
- 1902  who
- 1903  ls
- 1904  cd cmaketest/
- 1905  ls
- 1906  vi CMakeLists.txt
- 1907  cmake .
- 1908  ls
- 1909  vi Makefile
- 1910  make
- 1911  cd ..
- 1912  ls -al
- 1913  cd lab10
- 1914  cd cmaketest/
- 1915  ls
- 1916  ./fx_main 
- 1917  cd ..
+ 1873  ./fx_main
+ 1874  ls -al
+ 1875  make clean
+ 1876  make
+ 1877  ls
+ 1878  vi fx_test.c
+ 1879  cp /home/hwan/practical_c/lab10/fx_test.c .
+ 1880  cp /home/hwan/practical_c/lab10/fx_test.h .
+ 1881  vi fx_test.c
+ 1882  vi fx_test.h
+ 1883  cat /home/hwan/practical_c/lab10/fx_main.c
+ 1884  vi fx_main.c
+ 1885  make
+ 1886  ./fx_main 
+ 1887  vi fx_test.c
+ 1888  make
+ 1889  ./fx_main 
+ 1890  p
+ 1891  c
+ 1892  w
+ 1893  ls
+ 1894  vi fx_test.c
+ 1895  make
+ 1896  ./fx_main 
+ 1897  vi fx_s2308.c
+ 1898  cat /home/hwan/practical_c/lab10/test/test.c 
+ 1899  cat /home/hwan/practical_c/lab10/fx_test.c
+ 1900  cat /home/hwan/practical_c/lab10/fx_test.h
+ 1901  cat fx_test.h
+ 1902  cat fx_test.c
+ 1903  ls -al
+ 1904  ls
+ 1905  mkdir cmaketest
+ 1906  cp ../* .
+ 1907  ls
+ 1908  ls -al
+ 1909  cd ..
+ 1910  ls
+ 1911  cd lab10
+ 1912  ls
+ 1913  ls -r
+ 1914  ls -al
+ 1915  rm IamSLINK lab01.tar README.md 
+ 1916  ls -al
+ 1917  rm find.result 
  1918  ls
- 1919  git add *
- 1920  git commit -m "cmaketest"
- 1921  git push
- 1922  ls -al
- 1923  cd lab10
+ 1919  ls -al
+ 1920  cd cmaketest/
+ 1921  cp ../* .
+ 1922  ls
+ 1923  cd ..
  1924  ls
- 1925  history > history.txt
+ 1925  ls -al
+ 1926  ls
+ 1927  ls -al
+ 1928  rm a.out 
+ 1929  ls
+ 1930  ls -al
+ 1931  history > history.txt
+ 1932  ls
+ 1933  history
+ 1934  ls -al
+ 1935  make clean
+ 1936  make
+ 1937  make clean
+ 1938  ls -al
+ 1939  clean
+ 1940  ls
+ 1941  vi Makefile
+ 1942  who | sort
+ 1943  git add *
+ 1944  git commit -m "lab10"
+ 1945  git push
+ 1946  w
+ 1947  ls
+ 1948  who
+ 1949  ls
+ 1950  cd cmaketest/
+ 1951  ls
+ 1952  vi CMakeLists.txt
+ 1953  cmake .
+ 1954  ls
+ 1955  vi Makefile
+ 1956  make
+ 1957  cd ..
+ 1958  ls -al
+ 1959  cd lab10
+ 1960  cd cmaketest/
+ 1961  ls
+ 1962  ./fx_main 
+ 1963  cd ..
+ 1964  ls
+ 1965  git add *
+ 1966  git commit -m "cmaketest"
+ 1967  git push
+ 1968  ls -al
+ 1969  cd lab10
+ 1970  ls
+ 1971  history > history.txt
+ 1972  ls
+ 1973  cp ../lab09/README.md .
+ 1974  ls
+ 1975  git add *
+ 1976  git commit -m "lab10"
+ 1977  git push
+ 1978  w
+ 1979  ls
+ 1980  cd practical_c/
+ 1981  lab10
+ 1982  ls
+ 1983  cd lab10
+ 1984  ls
+ 1985  ls -al
+ 1986  history > history.txt 
