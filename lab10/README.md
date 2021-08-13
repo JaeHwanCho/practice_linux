@@ -6,54 +6,85 @@
 
 조재환, 201923718
 
-## Lab09
+## Lab10
 
-### what make differnet performance
-#### Golden Rule
+### tip
 
-Speed : CPU > Memory > Storage > IO
+If you want to use the command as a parameter
+ls -> `ls`
 
-Register > Cache > Memory
-
-Locality
-
-Pipeline - Multiple operations at the same time (in Computer architecture)
-
-Error - overflow (Performance slows down.)
-
-function
-
----
-
-**Depend on HW**
- - 1cycle execution : +, -, >>, <<, >?
-
----
-
-Ex)     **a = a + b;**
-
-| unsigned int a, b; | signed short a, b; |
+| Symbol | call |
 |:---: | :---: |  
-| ADD r0, r0, r1 | ADD r2, r0, r1 | 
-|  |  LSL r2, r2, #16 | 
-|  |  ASR r0, r2, #16 |
+| * | Asterisk, star | 
+| & | Ampersand | 
+| ` | Grave | 
+| ~ | Tilde | 
+| ! | Exclamation | 
+| # | Number Sign, Sharpp, Crosshatch | 
+| $ | Dollar Sign | 
+| % | Percent Sign | 
+| ^ | Caret | 
+| - | Hyphen, Dash |
+| _ | Underscore, Low Dash |
+| = | Equals Sign |
+| " | Quotation Mark |
+| ' | Apostrophe |
+| : | Colon |
+| ; | Semicolon |
+| , | Comma |
+| . | Period, Dot |
+| ? | Question Mark |
+| / | Slash |
+| | | Vertical Bar, Bat |
+| \ | Backslash |
+| ( | Left Parenthesis |
+| ) | Right Parenthesis |
+| { | Left Brace |
+| } | Right Brace |
+| [ | Left Braket |
+| ] | Right Braket |
+| < | Left Angle Braket |
+| > | Right Angle Braket |
 
-**signed short** is slower than **unsigned int**
+grep main *
+-> find main's location
+
+grep * | wc
+-> if line is 2 -> main is 1
+
+!ls *c : Briefly out of vi Editor
 
 ---
 
-### How to profile and optimize
+### Make
+#### Makefile
+**in Makefile**
+```
+main.o : main.c main.h
 
-#### GNU Profiler
+(tab) cc -c main.c -o main.o
+```
+* When you need "make" but you can't.
 
-**cc -pg "c file name(.c)"**
- - Compile c file with pg option
- - cc -pg fx_s2308.c
+    * "touch *.c" and "make" change the time of the c-file to the present, enabling "make".
 
-**./"Execute file name(.out)" <<< "A_value B_value"**
- - Execute file and insert A_value and B_value
- - ./a.out <<< "0.1 0.1"
 
-**gprof "Execute file name(.out)" gmon.out > "prof file name(.prof)"**
- - make profile ".prof"
- - gprof a.out gmon.out > a.prof
+$@ -> main.o (target)
+
+$< -> main.c (prerequisite) (dependency)
+
+&^ -> main.c, main.h (all)
+
+&? -> updated file (newer)
+
+&% -> archive member
+
+#### CMake
+
+1. make file "CMakeLists.txt"
+
+1. ADD_EXECUTABLE(fx_main fx_main.c fx_test.c fx_s2308.c)
+
+1. cmake .
+
+1. make
