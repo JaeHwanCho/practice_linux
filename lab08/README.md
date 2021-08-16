@@ -59,19 +59,25 @@ float + float = float
 **"-"**
 
 int - int = int
+
 int - float = float
+
 float - float = float
 
 **"*"**
 
 int * int = int
+
 int * float = float
+
 float * float = float
 
 **"/"**
 
 int / int = float
+
 int / float = float
+
 float / float = float
 
 **"%"**
