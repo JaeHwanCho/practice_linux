@@ -30,9 +30,8 @@ fixed fx_div5(fixed a, fixed b)
 {
 	long long la = a;
 	la <<= FX_QNUM;
-	la <<= FX_QNUM_HALF1;
+	b <<= FX_QNUM_HALF1;
 	la /= b;
 	la <<= FX_QNUM_HALF2;
-	la >>= FX_QNUM;
 	return (fixed) la;
 }
