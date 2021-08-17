@@ -6,85 +6,108 @@
 
 조재환, 201923718
 
-## Lab10
+## Lab11
 
 ### Tip
 
-If you want to use the command as a parameter
-ls -> `ls`
+#### Important
+**Logout must be done after using ssh.**
 
-| Symbol | call |
-|:---: | :---: |  
-| * | Asterisk, star | 
-| & | Ampersand | 
-| ` | Grave | 
-| ~ | Tilde | 
-| ! | Exclamation | 
-| # | Number Sign, Sharpp, Crosshatch | 
-| $ | Dollar Sign | 
-| % | Percent Sign | 
-| ^ | Caret | 
-| - | Hyphen, Dash |
-| _ | Underscore, Low Dash |
-| = | Equals Sign |
-| " | Quotation Mark |
-| ' | Apostrophe |
-| : | Colon |
-| ; | Semicolon |
-| , | Comma |
-| . | Period, Dot |
-| ? | Question Mark |
-| / | Slash |
-| | | Vertical Bar, Bat |
-| \ | Backslash |
-| ( | Left Parenthesis |
-| ) | Right Parenthesis |
-| { | Left Brace |
-| } | Right Brace |
-| [ | Left Braket |
-| ] | Right Braket |
-| < | Left Angle Braket |
-| > | Right Angle Braket |
+Only administrators can increase the priority
 
-grep main *
--> find main's location
+Lowering the priority is "nice {command}"
 
-grep * | wc
--> if line is 2 -> main is 1
+---
+### Context Switching
+A computer can only do one task at a time.
 
-!ls *c : Briefly out of vi Editor
+To solve this problem, several tasks are executed alternately in a very short period of time.
+
+
+
+### Core vs Thread
+**Core** is a physical CPU.(Actual)
+
+**Thread** is a logical CPU.(Virtual)
+
+CPU -> Processor
+
+**fork, clone : Creating a process**
+
+These days, we use clone more than fork.
+
+Because fork is dangerous.
+
+exit : Commands to terminate a process
 
 ---
 
-### Make
-#### Makefile
-**in Makefile**
+**Thread.h** - C11 - Visual Studio(microsoft), OS
 ```
-main.o : main.c main.h
+#include <threads.h>
+#include <stdio.h>
 
-(tab) cc -c main.c -o main.o
+int run(void *arg)
+{
+    printf("Hello world of C11 threads.");
+    return 0;
+}
+
+int main(int argc, const char *argv[])
+{
+    thrd_t thread;
+    int result;
+    thrd_create(&thread, run, NULL);
+    thrd_join(&thread, &result);
+    printf("Thread return %d at the end\n", result);
+}
 ```
-* When you need "make" but you can't.
 
-    * "touch *.c" and "make" change the time of the c-file to the present, enabling "make".
+---
+
+**pthread.h** - POSIX - IEEE, GNU, gcc
+```
+#include <pthread.h>
+#include <stdio.h>
+
+void *run (void *arg)
+{
+    printf("Hello world of POSXI threads.");
+    return 0;
+
+}
+
+int main()
+{
+	pthread_t thread;
+	int result; 
+	pthread_create(&thread, NULL, run, NULL );
+	pthread_join(thread, &result);
+	printf("Thread return %d at the end\n", result);
+}
+```
 
 
-$@ -> main.o (target)
+#### pthread.h
 
-$< -> main.c (prerequisite) (dependency)
+int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start_routine) (void *), void *arg);
 
-&^ -> main.c, main.h (all)
+const pthread_attr_t *attr -> NULL
 
-&? -> updated file (newer)
+- because very difficult task
 
-&% -> archive member
+pthread_create() : Create Threads
 
-#### CMake
+pthread_join() : Wait until the thread is terminated, and when it is terminated, release the resource.
 
-1. make file "CMakeLists.txt"
-
-1. ADD_EXECUTABLE(fx_main fx_main.c fx_test.c fx_s2308.c)
-
-1. cmake .
-
-1. make
+**mutex** - Use of "mutax" due to "static"
+```
+ static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+        static int a;
+        if (pthread_mutex_lock(&mutex) == 0)
+        {
+                ++a;
+                pthread_mutex_unlock(&mutex);
+        }
+        return(a);
+```
