@@ -6,108 +6,163 @@
 
 조재환, 201923718
 
-## Lab11
+## Lab12
 
-### Tip
+### Suresoft Special Lecture
 
-#### Important
-**Logout must be done after using ssh.**
+jshan@suresofttech.com
 
-Only administrators can increase the priority
-
-Lowering the priority is "nice {command}"
-
----
-### Context Switching
-A computer can only do one task at a time.
-
-To solve this problem, several tasks are executed alternately in a very short period of time.
-
-
-
-### Core vs Thread
-**Core** is a physical CPU.(Actual)
-
-**Thread** is a logical CPU.(Virtual)
-
-CPU -> Processor
-
-**fork, clone : Creating a process**
-
-These days, we use clone more than fork.
-
-Because fork is dangerous.
-
-exit : Commands to terminate a process
+Software Testing -> for Safety
 
 ---
 
-**Thread.h** - C11 - Visual Studio(microsoft), OS
-```
-#include <threads.h>
-#include <stdio.h>
+#### Software Testing
 
-int run(void *arg)
-{
-    printf("Hello world of C11 threads.");
-    return 0;
-}
+소프트웨어의 내부 구조 파악 여부
 
-int main(int argc, const char *argv[])
-{
-    thrd_t thread;
-    int result;
-    thrd_create(&thread, run, NULL);
-    thrd_join(&thread, &result);
-    printf("Thread return %d at the end\n", result);
-}
-```
+**White Box**
+- 소스코드의 구조를 기반으로 테스트를 수행하는 기법
+- 코드의 수행 경로, 불필요한 코드 혹은 테스트 되지 못한 부분을 확인
+
+**Black Box**
+- 소프트웨어의 내부를 보지않고 기능의 유효성을 판단하는 테스트 기법
+
+소프트웨어의 실행 여부
+
+**Static**
+- 프로그램을 실행하지 않고 소스 코드 전체 또는 일부를 분석하는 기법
+
+**Dynamic**
+- SW를 실행하여 다양한 입력 값에 대해 기대하는 결과 값이 나타나는 지 확인하는 테스팅 기법
+
+|  | Black Box Testing | White Box Testing |
+|:---: | :---: | :---: | 
+| Static Testing | Documentation Review | Source code Review | 
+| Dynamic Testing |  Specification based Testing | Structural Testing | 
+
+#### Summary
+
+SW Testing : 소프트웨어 개발 과정에서의 발생할 수 있는 오류들을 가정하고, 그러한 오류들을 발견해 내는 활동
+
+소스를 본다 -> Black Box
+
+소스를 안본다 -> White Box
+
+소스를 실행한다 -> 동적 Test
+
+소스를 실행안한다 -> 정적 Test
 
 ---
 
-**pthread.h** - POSIX - IEEE, GNU, gcc
-```
-#include <pthread.h>
-#include <stdio.h>
+#### 소프트웨어 기능안전
+**기능안전(Functional Safety)**
+- 시스템이나 장비의 총체적 안전의 일환으로 하드웨어 고장, 소프트웨어 오류, 운영자 오류 그리고 환경적인 영향 등에 대한 안전 관리
+- 1998년 IEC 61508 : 기능안전(Functional Safety) 관련 국제표준
 
-void *run (void *arg)
-{
-    printf("Hello world of POSXI threads.");
-    return 0;
+**소프트웨어 산업의 선순환 구조**
 
-}
+- 개발이 늘어나고
 
-int main()
-{
-	pthread_t thread;
-	int result; 
-	pthread_create(&thread, NULL, run, NULL );
-	pthread_join(thread, &result);
-	printf("Thread return %d at the end\n", result);
-}
-```
+- 검증이 늘어나고
 
+- 품질이 좋아지고
 
-#### pthread.h
+- 투자가 늘어난다.
 
-int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start_routine) (void *), void *arg);
+---
 
-const pthread_attr_t *attr -> NULL
+#### 정적 테스트
+**소프트웨어를 실행시키지 않고 결함을 검출하는 방법**
+- 정적 분석 = 정적 테스트
 
-- because very difficult task
+정적 테스트는 검사 결과와 특정한 판단 기준을 비교하여 오류를 찾는다.
 
-pthread_create() : Create Threads
+- Syntax
+    - 소스코드의 문법 결함 발견
+- Semantic
+    - 의미적인 결함 발견
 
-pthread_join() : Wait until the thread is terminated, and when it is terminated, release the resource.
+**장점**
+- 빠른 시간에 소프트웨어 결함 검출
+- 수행 노력이 작다.
 
-**mutex** - Use of "mutax" due to "static"
-```
- static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
-        static int a;
-        if (pthread_mutex_lock(&mutex) == 0)
-        {
-                ++a;
-                pthread_mutex_unlock(&mutex);
-        }
-        return(a);
-```
+**단점**
+- 잘못된 패턴 판단으로 False 알림 가능
+- 기능 동작 테스트 불가
+
+**이슈사항**
+
+- 소프트웨어에서 검출하고자 하는 오류 유형에 맞는 수행 방식 선정
+
+- 소프트웨어에 요구되는 품질 수준에 따라 테스트 종료 기준 설정 필요
+
+**정적 테스팅 수행**
+
+Review : 계획부터 후속처리확인 과정까지 사람이 직접 테스트하는 방식
+
+Syntax : 소프트웨어 소스코드에 존재하는 문법적인 오류를 미리 정해놓은 패턴의 기준으로 검사하여 발견하는 정적 테스트 방법
+
+자동화 도구를 사용하여 테스트하는 것이 효율적
+
+---
+
+#### 동적 테스트
+**소프트웨어 실행을 통하여 소프트웨어에 존재하는 결함을 검출하는 방법**
+동적 테스트를 위한 조건
+- 소프트웨어가 실행 가능한 환경 구축
+- 소프트웨어를 실행하기 위한 입력, 수행 결과를 관찰하기 위한 방법
+
+**구분**
+
+단위 동적 테스트 -> 통합 동적 테스트 -> 시스템 동적 테스트
+
+**장점**
+- 소프트웨어 기능 동작에 대한 정밀한 검증 가능
+- 테스트 수행결과의 False 알림 빈도 낮음
+
+**단점**
+- 결함 검출 과정 시간과 노력 필요
+
+**이슈사항**
+- 소프트웨어에서 실행시 입력할 적절한 테스트케이스 설계 전략 선정 필요
+- 소프트웨어에 요구되는 품질 수준에 따라 테스트 종료 기준 설정 필요
+
+**테스트 케이스 설계 전략 방법**
+- 동등 클래스 분할
+- 경계값 분석
+- 상태전이 기반
+- 경로 기반
+
+**종료 기준**
+- **테스트 커버리지**
+    - **테스트의 완성도를 나타내는 정량적 수치**
+    - 테스트 종료 기준 선정 시 테스트 종류에 따라 적절한 테스트 커버리지를 선택
+
+**테스트 커버리지 종류**
+- 단위 테스트
+    - 구문 커버리지
+        - 구문의 수행한 정도
+    - 조건 커버리지
+        - 개별 조건에 대해 수행한 정도
+    - 결정(분기) 커버리지
+        - 조건문, 분기문의 수행한 정도
+    - 변경조건/결정 커버리지
+        - 각 개별 조건이 다른 조건의 영향을 받지 않고 전체 조건의 결과에 독립적으로 미치는 영향의 정도
+
+- 통합 테스트
+    - 함수 커버리지
+        - 함수의 호출에 대해 수행한 정도
+    - 함수 콜 커버리지
+        - 함수의 호출 지점에 대해 수행한 정도
+- 시스템 테스트
+    - 명세 커버리지
+        - 기술된 요구명세에 대하여 수행한 정도
+
+** MC/DC Coverage **
+- **변경 조건/결정 커버리지**
+- 조건 커버리지와 분기 커버리지를 보완해서 만든 커버리지
+
+1. 결과를 다르게 만드는 조건들을 모아서 테스트 케이스를 만든다.
+
+1. 그 케이스들을 소프트웨어가 모두 통과 : MC/DC 커버리지 = 100%
+
