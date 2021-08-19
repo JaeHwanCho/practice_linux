@@ -168,3 +168,88 @@ Syntax : 소프트웨어 소스코드에 존재하는 문법적인 오류를 미
 
 1. 그 케이스들을 소프트웨어가 모두 통과 : MC/DC 커버리지 = 100%
 
+---
+
+### 실습
+
+#### CI
+
+![pic_0](https://git.ajou.ac.kr/Jaehwan/practical_c/-/raw/master/jpg/0.jpg)
+
+lab10의 파일을 CodeScroll Code Inspector 3.7로 실행시키게 되면 위와 같은 메세지로
+
+위배되는 갯수 165개와 자동수정가능한 갯수 16개를 알려준다.
+
+자동수정 되는 파일들을 보면
+
+![pic_1](https://git.ajou.ac.kr/Jaehwan/practical_c/-/raw/master/jpg/1.jpg)
+
+![pic_2](https://git.ajou.ac.kr/Jaehwan/practical_c/-/raw/master/jpg/2.jpg)
+
+위와 같이 // 로 주석한 것들을 /* */ 을 통해 주석으로 바꿔준다.
+
+
+![pic_3](https://git.ajou.ac.kr/Jaehwan/practical_c/-/raw/master/jpg/3.jpg)
+
+그리고 위와 같이 {}로 안묶인 것들을 {}로 묶어주는 작업을 해준다.
+
+그리고 수동으로 몇가지를 고쳐준다.
+
+a나 i를 통해 반복적인 변수명을 바꿔주는 작업, 빈 괄호에 void를 적어주는 작업 등등을 하게 되면
+
+그리고 수동으로 고칠수 있는 작업을 하게 되면 104개까지 줄일 수 있게 된다.
+
+- 남은 작업들은 float, int, long long 을 사용하여 오류가 생긴 42개
+
+- 이전에 선언을 해주지 않아 생긴 7개
+
+- 사용하지 않았지만 extern fixed fx_divN(~~) 을 통해 미리 정의해준 6개
+
+- int -> float로 타입을 변경하며 생긴 7개
+
+- int -> long long으로 타입을 변경하며 생긴 1개
+
+- float -> int로 타입을 변경하며 생긴 4개
+
+- print 호출로 인한 오류 15개
+
+- 매크로 사용으로 인한 오류 7개
+
+- printf는 금지되어 생긴 오류 14개와 include <stdio.h> 가 금지된 파일로 생긴 오류 1개
+
+이 작업을 통해 많은 미스라 규칙을 알 수 있다.
+
+#### CT
+
+lab10의 파일을 CodeScroll Controller Tester 3.5로 실행시키게 되면
+
+![pic_9](https://git.ajou.ac.kr/Jaehwan/practical_c/-/raw/master/jpg/9.jpg)
+
+위와 같은 커버리지를 보여준다.
+
+그리고 제어 흐름 그래프를 보고싶다면,
+
+![pic_6](https://git.ajou.ac.kr/Jaehwan/practical_c/-/raw/master/jpg/6.jpg)
+
+![pic_7](https://git.ajou.ac.kr/Jaehwan/practical_c/-/raw/master/jpg/7.jpg)
+
+![pic_8](https://git.ajou.ac.kr/Jaehwan/practical_c/-/raw/master/jpg/8.jpg)
+위와 같은 제어 흐름 그래프를 보여준다.
+
+fx_div1, fx_div2, fx_div3 의 제어흐름 그래프는 같고
+
+test_div1, test_div2, test_div3, test_mul2, test_mul3, test_mul4, test_mul5의 제어흐름 그래프는 같다.
+
+현재 if문들이 없어 MC/DC 등의 조사는 힘들고
+
+커버리지를 100% 채우기엔 test 함수들의 반복 횟수로 인해 timeout이 발생해 100%를 채우기는 불가능하다.
+
+---
+
+CI 프로그램은 2500만원, CT 프로그램을 5000만원이라고 한다.
+
+이번 2일간의 슈어소프트 팀장님의 강의와 소프트웨어 검사를 해주는 프로그램을 실제로 경험해보고
+
+소프트웨어를 보다 안전하게 만드는 것의 중요함을 다시 깨닫는 경험이 되었다.
+
+#### **Software Testing -> for Safety**
